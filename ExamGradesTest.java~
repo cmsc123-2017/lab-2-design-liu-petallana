@@ -27,19 +27,15 @@ public class ExamGradesTest extends TestCase {
   }
   
   public void testHighestGrades() {
-    double grades[] = {99.0, 100.0, 98.0};
-    double grades1[] = {100.0, 98.0, 99.0};
-    double grades2[] = {99.0, 98.0, 100.0};
-    double grades3[] = {100.0, 100.0, 99.0};
+    double grades[] = new double[10];
+    
+    for (int i = 0; i < 10; i++) {
+      grades[i] = 100 - i;
+    }
     
     ExamGrades g = new ExamGrades(grades);
-    ExamGrades a = new ExamGrades(grades1);
-    ExamGrades b = new ExamGrades(grades2);
-    ExamGrades c = new ExamGrades(grades3);
     
-    assertEquals(100.0, g.highestGrade());
-    assertEquals(100.0, a.highestGrade());
-    assertEquals(100.0, b.highestGrade());
-    assertEquals(100.0, c.highestGrade());
+    assertEquals(95, g.highestGrade());
+    assertEquals(90, g.highestGrade());
   }  
 }
