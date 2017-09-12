@@ -5,7 +5,7 @@ class ExamGrades {
     this.grades = grades;
   }
   
-  // TODO design a function that returns the highest grade
+  // DONE design a function that returns the highest grade
   
   /* -> double
    * Returns the highest grade given an array of grades.
