@@ -23,6 +23,7 @@ class Book {
   // Book -> boolean
   // Returns true if this Book has the same author
   // as another book
+  
   boolean sameAuthor(Book that) {    
     return this.author.equals(that.author);
     
@@ -37,8 +38,27 @@ class Book {
   }
  
   
-  // TODO design a function publishedBefore that accepts a Book and
+  // DONE design a function publishedBefore that accepts a Book and
   //   returns true if this Book was published before the other 
   
+  /* Book -> boolean
+   * Determines whether this Book was published before the other
+   */
   
+  /* Template
+   *   Fields:
+   *     ... this.year -- int
+   *     ... this.title -- String
+   * 
+   *   Methods:
+   * 
+   */
+  
+  boolean publishedBefore(Book other) {
+    if (this.year < other.year) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
